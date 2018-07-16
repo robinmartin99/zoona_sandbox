@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="Set-CORS" version="SHA-512:5c086607ec8c2212a8f751e8542c7a3f722aaaa629058281ae6e2dab33935ef375575d115b13048aae5fe54a25007051e659b235bc34c24e067760a31cf8ccf9"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:abcafc1c204d59f81ac22359b4f8d708da02054ea582004492e7592fedbb4ca28feb680622f86ee7b55702947ee4b406c04098e848a809e6adc98be1ed26f129"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="node://app.js" version="SHA-512:9605d6221a3f31fe4b0e2d2ee4e38bb6c910cbc3c31241c73404201b9822b59dba50912fa7073333a2eefa0222cae4c648e4eedca1ab2e7aa92cab8172fd5e35"/>
+        <VersionInfo resourceName="node://config.json" version="SHA-512:c391ea5c6a118d8a53a23c941706230b61154c6a435f5d7f00be39b2b7a9356cf9853aae8f34a95db71a68507bce95a40bcfec574c8d834227bb00833300e21b"/>
+        <VersionInfo resourceName="node://mock/merchantbalance.json" version="SHA-512:c95b78758563a7a7d1c67f65a656e344335521b872c58851df0a54208cfb54d9581c4db1bbfbebcf8aef176c6beb13da8703ba82fff8876c04655463fc1506cd"/>
+        <VersionInfo resourceName="node://mock/merchantcreate.json" version="SHA-512:cc68fc29f3ebb1a4844bb5eb4d9c7a5c3c836910b1a5e1a514326f52c9ef8ae84bb15037168e7e092dd47f974a067cc66f89371180dab9a33980a77cc5d52181"/>
+        <VersionInfo resourceName="node://mock/merchanterror.json" version="SHA-512:c0ab5d5df4365370b0a6e85c974634191937c2b6a05cf8de8d0489168c4b789411a8d7f8786295a9152b96c8ac0917a422814df05305e74734d82b0576fa76d5"/>
+        <VersionInfo resourceName="node://mock/merchanttransactions.json" version="SHA-512:441e1eb5800c04f8182b6516f0b2cacfc5b6c702707b9e776a8d3afc47964cf5ce8374495fd8bb630b4092700b4c73539d449277a26f56b2ab7569bbb62fea2b"/>
+        <VersionInfo resourceName="node://mock/paymentcodecreate.json" version="SHA-512:b7ee186f283d42e346cf679b66727e38a9ac812fdc89a6abe26a70dba35871170fbb00e1b928ad6d7e534bedc5d5792b411f93e2e02367b1c1e670dae975eb54"/>
+        <VersionInfo resourceName="node://mock/paymentcodedelete.json" version="SHA-512:6ca900f26bf25c951c1545450d4cbeecd58991b0dd36096f72ac0eef1466b185c45694ca8f527e9f26ef1940fdc600a66082e73b9347cdc34e43545236ea2459"/>
+        <VersionInfo resourceName="node://mock/paymentcoderequest.json" version="SHA-512:749ead59ea17b90b900e3fbc74f7fae0b341983a8d13f8983941543a9afd27888f670d579fbb68b74ea63b00c99fc59736a8ea0dcc1f16b83810a5c7174c3b3b"/>
+        <VersionInfo resourceName="node://mock/webhookdelete.json" version="SHA-512:3fc8ce6700cf6425c28606a44ddb59b557b2de12bae13bfd2f03b45a09640cfddd0269340b957f0e9e29f310e9a8a76baf29ffa35c2cf6bd47afcb1ba065ce62"/>
+        <VersionInfo resourceName="node://mock/webhooklist.json" version="SHA-512:6a659b516441cc0786b2a9a458f66d1a72fa9a3a5fe16ad9bcd47d4b98c5614f1af96e8d99b1cb017cdc6e33c34241969a255735ce1eb1b4230e549cb4a54add"/>
+        <VersionInfo resourceName="node://mock/webhooknotification.json" version="SHA-512:97d36768c50ae5558f07f3fdc8f87ec66d6b57d77befe912f11a40600b34716e1c08e73a051386a825316ab0ae23664a42d7a71aa0f138d09e4fc9104a867bef"/>
+        <VersionInfo resourceName="node://node_modules.zip" version="SHA-512:9c7ad3e932553536162bc315197500bd6bf447163d9a8b152e6e86685e029e0fe0d6d82e5339c03b7c15a5e7bbf9d36268edb78c09977abf3bda61febd36aba2"/>
+        <VersionInfo resourceName="node://package.json" version="SHA-512:d4904fe68da38d80ff2d7aac8122c5d4c664baf649b49c6f4f08fadf0fdaa79bacd2114f18775b6d1896937c906e326cb913ee683da3b63a879782cfb1e945d9"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="node" version="SHA-512:17f55ca378e485620331ac7af3b5ca12bfc015bf1366110895dcbdd4aa9657a5928b8949b17d438b2f71f97bdad8efefd8e87f9b90cee3a9c48d87e4daf07f47"/>
+    </TargetEndpoints>
+</Manifest>

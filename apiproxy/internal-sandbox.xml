@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="internal-sandbox">
+    <Basepaths>/mock</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1531776806093</CreatedAt>
+    <CreatedBy>robinm@cornastone.co.za</CreatedBy>
+    <Description>Zoona sandbox endpoint for the Zoona payment API</Description>
+    <DisplayName>zoona-sandbox</DisplayName>
+    <LastModifiedAt>1531778513846</LastModifiedAt>
+    <LastModifiedBy>robinm@cornastone.co.za</LastModifiedBy>
+    <ManifestVersion>SHA-512:49c3f54fdd92c6efe1e864672be8cb087bb09dee7b6b6fe817475b3b6e9ea961edbd4f3923dab62412cf095abb823cae27d0fd52cb46d18059056c6d7cfd5bd3</ManifestVersion>
+    <Policies>
+        <Policy>Set-CORS</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>node://app.js</Resource>
+        <Resource>node://config.json</Resource>
+        <Resource>node://mock/merchantbalance.json</Resource>
+        <Resource>node://mock/merchantcreate.json</Resource>
+        <Resource>node://mock/merchanterror.json</Resource>
+        <Resource>node://mock/merchanttransactions.json</Resource>
+        <Resource>node://mock/paymentcodecreate.json</Resource>
+        <Resource>node://mock/paymentcodedelete.json</Resource>
+        <Resource>node://mock/paymentcoderequest.json</Resource>
+        <Resource>node://mock/webhookdelete.json</Resource>
+        <Resource>node://mock/webhooklist.json</Resource>
+        <Resource>node://mock/webhooknotification.json</Resource>
+        <Resource>node://node_modules.zip</Resource>
+        <Resource>node://package.json</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>node</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

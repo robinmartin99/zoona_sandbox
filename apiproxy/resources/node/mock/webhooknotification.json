@@ -1,0 +1,65 @@
+[{
+		"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f75",
+		"error": {
+			"error-code": "",
+			"httpStatus": 200,
+			"message": "webhook registered",
+			"webhook": {
+				"uuid": "5861ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+				"endpoint": "http://my.api.example.com/payment",
+				"notify-on": "receive-payment"
+			}
+
+		}
+	},
+	{
+		"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f76",
+		"error": {
+			"error-code": "",
+			"httpStatus": 400,
+			"message": "requested endpoint already registered",
+			"webhook": {
+				"uuid": "5861ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+				"endpoint": "http://my.api.example.com/payment",
+				"notify-on": "receive-payment"
+			}
+		}
+	},
+	{
+		"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f77",
+		"error": {
+			"error-code": "",
+			"httpStatus": 400,
+			"message": "invalid parameters in request, please correct and retry",
+			"invalid-parameters": {
+				"endpoint": "notavalidaddress",
+				"notify-on": ""
+			}
+		}
+	},
+	{
+		"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f78",
+		"error": {
+			"error-code": "",
+			"httpStatus": 400,
+			"Message": "could not retrieve account information, please contact customer care for more information"
+		}
+	},
+	{
+		"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f79",
+		"error": {
+			"error-code": "",
+			"httpStatus": 401,
+			"message": "UnAuthorized : Could not authorize request"
+		}
+	},
+	{
+		"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f80",
+		"error": {
+			"error-code": "",
+			"httpStatus": 500,
+			"message": "could not process request, please retry later or contact support and quote correlation id if applicable"
+		}
+	}
+
+]

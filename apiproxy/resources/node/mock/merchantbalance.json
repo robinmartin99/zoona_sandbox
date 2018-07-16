@@ -1,0 +1,73 @@
+[  
+     {  
+    "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f75",
+     "error": {
+    "error-code": "",
+    "httpStatus": 200,
+    "balance": "5800.20",
+    "account-status": "active",
+    "minimum-balance": "50",
+    "maximum-balance": "10000"
+            }
+        },
+     {  
+	  "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f76",
+	   "error": {
+		"error-code": "",
+    "httpStatus": 200,
+		"message": "account is suspended please contact customer care for more information",
+		"balance": "5800.20",
+		"account-status": "suspended",
+		"minimum-balance": "50",
+		"maximum-balance": "10000"
+            }
+        },
+     { 
+        "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f77",
+         "error": {
+		"error-code": "",
+    "httpStatus": 200,
+		"message": "account has maximum allowed balance, all deposits and payment-code redemptions will be rejected until balance is reduced, please contact customer care for more information",
+		"balance": 10000.00,
+		"account-status": "debit-only",
+		"minimum-balance": 50,
+		"maximum-balance": 10000
+        }
+     },   
+     { 
+         "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f78",
+         "error": {
+		"error-code": "",
+    "httpStatus": 200,
+		"message": "account has minimum allowed balance, all withdrawals will be rejected until balance is increased, please contact customer care for more information",
+		"balance": 50.00,
+		"account-status": "credit-only",
+		"minimum-balance": 50,
+		"maximum-balance": 10000
+		}
+     },   
+     { 
+      "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f79",
+      "error": {
+          "error-code": "",
+          "httpStatus": 400,
+          "message":"could not retrieve account information, please contact customer care for more information"
+             }
+     },   
+     { 
+        "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f80",
+       "error": {
+          "error-code": "",
+          "httpStatus": 401,
+          "message": "UnAuthorized: Could not authorize request"
+          }
+      },
+      {
+	"x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f81",
+	"error": {
+	  "error-code": "",
+	  "httpStatus": 500,
+	  "message": "could not process request, please retry later or contact support and quote correlation id if applicable"
+	  }
+}
+]

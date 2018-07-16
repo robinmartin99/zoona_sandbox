@@ -1,0 +1,91 @@
+[   
+	{ 
+        
+		"paymentCode":12345678,
+         "error": {
+			"error-code": "",
+		    "httpStatus": 200,
+		    "message": "available",
+		    "payment-code":"12345679",
+		    "valid-until":"2018-05-01 15:00:00",
+		    "amount":100.59,
+		    "fee":5,
+		    "reference":"INV-001"
+			}
+     },
+	 { 
+        
+		"paymentCode":12345679,
+         "error": {
+			"error-code": "",
+		    "httpStatus": 200,
+		    "message": "expired",
+		    "payment-code":"12345679",
+		    "valid-until":"2018-05-01 15:00:00",
+		    "amount":100.59,
+		    "fee":5,
+		    "reference":"INV-001"
+			}
+     },
+	 		
+		{  
+	  
+		"paymentCode":12345680,
+         "error":  {
+		 "error-code": "",
+		    "httpStatus": 200,
+		   "payment-state":"paid",
+		"payment-code":"12345678",
+		"valid-until":"2018-05-01 15:00:00",
+		"amount":"100",
+		"fee":"5",
+		"reference":"INV-001"
+	}
+	},
+	{
+	
+	 
+		"paymentCode":12345681,
+         "error": {  
+		 "error-code": "",
+		  "httpStatus": 200,
+    "payment-state":"cancelled",
+    "payment-code":"12345678",
+    "valid-until":"2018-05-01 15:00:00",
+    "amount":"100",
+    "fee":"5",
+    "reference":"INV-001"
+}
+	
+	
+	},
+	{
+	 
+		"paymentCode":12345682,
+         "error": {
+		 "error-code": "",
+		  "httpStatus": 404,
+     "message":"Not Found : Can not find payment-code, please check and try again"
+ }
+	
+	},
+	{
+	 
+		"paymentCode":12345683,
+         "error": {
+		 "error-code": "",
+		  "httpStatus": 401,
+     "message": "UnAuthorized : Could not authorize request"
+ }
+	},
+	{
+	 
+		"paymentCode":12345684,
+         "error": {
+		 "error-code": "",
+		  "httpStatus": 500,
+    "message": "could not process request, please retry later or contact support and quote correlation id if applicable"
+}
+	}
+      
+]

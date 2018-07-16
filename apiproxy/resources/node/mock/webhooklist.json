@@ -1,0 +1,54 @@
+[{
+		"uuid": "5862ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+		"error": {
+			"error-code": "",
+			"httpStatus": 200,
+			"webhooks": [{
+					"uuid": "5861ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+					"endpoint": "http://my.api.example.com/payment",
+					"notify-on": "receive-payment"
+				},
+				{
+					"uuid": "9d5d8d2d-48c4-b5e0-6eef-b8b75861ce42",
+					"endpoint": "http://my.api.example.com/payment-backup",
+					"notify-on": "receive-payment"
+				}
+			]
+		}
+	},
+	{
+		"uuid": "5863ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+		"error": {
+			"error-code": "",
+			"httpStatus": 200,
+			"uuid": "5861ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+			"endpoint": "http://my.api.example.com/payment",
+			"notify-on": "receive-payment"
+		}
+	},
+	{
+		"uuid": "5864ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+		"error": {
+			"error-code": "",
+			"httpStatus": 404,
+			"message": "Not Found"
+		}
+	},
+	{
+		"uuid": "5865ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+		"error": {
+			"error-code": "",
+			"httpStatus": 400,
+			"message": "UnAuthorized : Could not authorize request"
+		}
+	},
+	{
+		"uuid": "5866ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+		"error": {
+			"error-code": "",
+			"httpStatus": 500,
+			"message": "could not process request, please retry later or contact support and quote correlation id if applicable"
+		}
+	}
+
+]

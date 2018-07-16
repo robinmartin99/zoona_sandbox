@@ -1,0 +1,54 @@
+[{  
+	  "paymentCode":12345678,
+	   "error": {
+		    "error-code": "",
+		    "httpStatus": 200,
+		    "payment-state":"cancelled",
+            "payment-code":"12345678",
+            "valid-until":"2018-05-01 15:00:00",
+            "amount":"100",
+            "fee":"5",
+            "reference":"INV-001"
+
+		    }
+        },
+        {  
+	  "paymentCode":12345679,
+	   "error": {
+		    "error-code": "",
+		    "httpStatus": 400,
+		    "message":"payment-code cannot be cancelled, please check payment-state",
+		    "payment-state":"expired",
+            "payment-code":"12345678",
+            "valid-until":"2018-05-01 15:00:00",
+            "amount":"100",
+            "fee":"5",
+            "reference":"INV-001"
+
+		    }
+        },
+         { 
+         "paymentCode":12345680,
+         "error": {
+		"error-code": "",
+		"httpStatus": 404,
+		"message":"Not Found"
+		}
+     },   
+     { 
+      "paymentCode":12345681,
+      "error": {
+		  "error-code": "",
+		  "httpStatus": 400,
+		      "message": "UnAuthorized : Could not authorize request"
+		     }
+     },   
+     { 
+         "paymentCode":12345682,
+         "error": {
+		"error-code": "",
+		"httpStatus": 500,
+		"message": "could not process request, please retry later or contact support and quote correlation id if applicable"
+		}
+	}
+    ]

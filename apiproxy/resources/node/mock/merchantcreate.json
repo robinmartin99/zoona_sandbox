@@ -1,0 +1,75 @@
+[  
+     {  
+          "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f75",
+           "error": {
+            "error-code": "",
+            "httpStatus": 200,
+            "uuid":"5861ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+            "merchant-code":"12345678",
+            "username":"0969999999"
+            }
+        },
+     {  
+          "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f76",
+           "error": {
+            "error-code": "",
+            "httpStatus": 400,
+            "message": "duplicate request",
+            "uuid":"5861ce42-6eef-48c4-b5e0-b8b79d5d8d2d",
+            "merchant-code":"12345678",
+            "username":"0969999999"
+            }
+        },
+     { 
+        "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f77",
+         "error": {
+         "error-code": "",
+          "httpStatus": 400,
+          "message":"mobile number already registered, please use a new mobile number",
+           "invalid-parameters":{  
+                "mobile-number":"260969999999"
+              }
+        }
+     },   
+     { 
+         "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f78",
+         "error": {
+           "error-code": "",
+           "httpStatus": 400,
+          "message": "identity information is blacklisted and cannot be registered, please contact customer care for more information",
+          "invalid-parameters":{
+              "identity-number":"999999/99/9",
+              "identification-type":"NRC"
+              }
+          }
+     },   
+     { 
+      "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f79",
+      "error": {
+          "error-code": "",
+          "httpStatus": 400,
+          "message":"invalid parameters in request, please correct and retry",
+           "invalid-parameters":{  
+              "identity-number":"123",
+              "identification-type":"",
+              "country":"af"
+              }
+            }
+     },   
+     { 
+        "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f80",
+       "error": {
+          "error-code": "",
+          "httpStatus": 400,
+          "message": "duplicate correlation id, please retry with a new x-api-correlation-id value"
+          }
+      },
+      {
+	"x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f81",
+	"error": {
+	  "error-code": "",
+	  "httpStatus": 500,
+	  "message": "could not process request, please retry later or contact support and quote correlation id if applicable"
+	  }
+}
+]

@@ -1,0 +1,73 @@
+[{
+	"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f75",
+	"error": {
+		"error-code": "Success",
+		"httpStatus": 200,
+		"Transaction1": {
+			"identification": "Payment-code redemption",
+			"correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f76",
+			"credit-entry": {
+				"currency": "ZMW",
+				"amount": 95.00,
+				"date": "Tue Mar 06 13:46:50 GMT 2018"
+			},
+			"payment-detail": {
+				"payment-state": "paid",
+				"payment-code": "12345678",
+				"valid-until": "2018-05-01 15:00:00",
+				"amount": "100",
+				"fee": "5",
+				"reference": "INV-001"
+			},
+			"paid-by": {
+				"mobile-number": "260969888888",
+				"channel": "Zoona Plus"
+			}
+		},
+		"Transaction2": {
+			"identification": "Merchant payment",
+			"correlation-id": "2d1401cb-d497-d5c6-a88d-d82a1d605ff2",
+			"credit-entry": {
+				"currency": "ZMW",
+				"amount": 44.00,
+				"date": "Tue Mar 06 17:01:00 GMT 2018"
+			},
+			"payment-detail": {
+				"merchant-code": "12345678",
+				"amount": 45.00,
+				"fee": 1.00
+			},
+			"paid-by": {
+				"mobile-number": "",
+				"channel": "OTC cash",
+				"reference": "joseph p"
+			}
+		}
+	}
+},
+
+	{
+			"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f76",
+			"error": {
+				"error-code": "",
+				"httpStatus": 400,
+				"message": "could not retrieve account information, please contact customer care for more information"
+			}
+		},
+		{
+			"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f77",
+			"error": {
+				"error-code": "",
+				"httpStatus": 401,
+				"message": "UnAuthorized: Could not authorize request"
+			}
+		},
+		{
+			"x-api-correlation-id": "c61401cb-d497-4bc6-a88d-d82a1d605f78",
+			"error": {
+				"error-code": "",
+				"httpStatus": 500,
+				"message": "could not process request, please retry later or contact support and quote correlation id if applicable"
+			}
+		}
+]

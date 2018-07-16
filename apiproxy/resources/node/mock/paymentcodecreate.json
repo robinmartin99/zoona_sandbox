@@ -1,0 +1,78 @@
+[  
+      {
+	  "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f75",
+	   "error": {
+		    "error-code": "",
+		    "httpStatus": 200,
+		    "payment-code":"12345678",
+		    "valid-until":"2018-05-01 15:00:00",
+		    "amount":100.59,
+		    "fee":5,
+		    "reference":"INV-001"
+		    }
+        },
+     {  
+	  "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f76",
+	   "error": {
+		    "error-code": "",
+		    "httpStatus": 400,
+		    "message": "duplicate request",
+		    "payment-code":"12345678",
+		    "valid-until":"2018-05-01 15:00:00",
+		    "amount":100.59,
+		    "fee":5,
+		    "reference":"INV-001"
+		    }
+        },
+     { 
+        "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f77",
+         "error": {
+		"error-code": "",
+		"httpStatus": 400,
+		"message": "requested payment amount will cause account to exceed maximum allowed balance, please reduce funds in account or request a lower amount"
+        }
+     },   
+     { 
+         "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f78",
+         "error": {
+		"error-code": "",
+		"httpStatus": 400,
+		"message": "account is not able to transact, perform a balance request to determine account status or contact customer care for more information"
+		}
+     },   
+     { 
+      "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f79",
+      "error": {
+		  "error-code": "",
+		  "httpStatus": 400,
+		  "message": "invalid parameters in request, please correct and retry",
+		  "invalid-parameters": {
+			"amount": -5
+			}
+		     }
+     },   
+     { 
+         "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f80",
+         "error": {
+		"error-code": "",
+		"httpStatus": 400,
+		"message": "duplicate correlation id, please retry with a new x-api-correlation-id value"
+		}
+     },   
+     { 
+        "x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f81",
+        "error": {
+		  "error-code": "",
+		  "httpStatus": 401,
+		  "message": "UnAuthorized: Could not authorize request"
+		  }
+      },
+      {
+	"x-api-correlation-id":"c61401cb-d497-4bc6-a88d-d82a1d605f82",
+	"error": {
+		  "error-code": "",
+		  "httpStatus": 500,
+		  "message": "could not process request, please retry later or contact support and quote correlation id if applicable"
+		  }
+}
+]

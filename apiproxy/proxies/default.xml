@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description>default</Description>
+    <DefaultFaultRule name="always-enforce-fault-rule">
+        <Step>
+            <Name>Set-CORS</Name>
+        </Step>
+        <AlwaysEnforce>true</AlwaysEnforce>
+    </DefaultFaultRule>
+    <Flows>
+        <Flow name="preFlight">
+            <Description>CORS support</Description>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>Set-CORS</Name>
+                </Step>
+            </Response>
+            <Condition>request.verb == "OPTIONS" AND request.header.origin != null AND request.header.Access-Control-Request-Method != null</Condition>
+        </Flow>
+    </Flows>
+    <RouteRule name="NoRoute">
+        <Condition>request.verb == "OPTIONS" AND request.header.origin != null AND request.header.Access-Control-Request-Method != null</Condition>
+    </RouteRule>
+    <RouteRule name="Any">
+        <TargetEndpoint>node</TargetEndpoint>
+    </RouteRule>
+    <!-- RouteRule name="No Route"/ -->
+    <HTTPProxyConnection>
+        <BasePath>/internal-sandbox</BasePath>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+</ProxyEndpoint>

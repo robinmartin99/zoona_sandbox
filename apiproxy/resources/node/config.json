@@ -1,0 +1,123 @@
+{
+  "mockDirectory": "./mock",
+  "quiet": false,
+  "port": "8080",
+  "latency": 50,
+  "logRequestHeaders": false,
+  "allowedHeaders": ["Content-Type", "application/json"],
+  "webServices": {
+         "merchant": { 
+         "latency": 20,
+         "verbs": ["post"],
+         "mockFile": "merchantcreate.json",
+         "switch":"x-api-correlation-id",
+         "jsonPathSwitchResponse": { 
+             "jsonpath": "$[?(@['x-api-correlation-id']",
+             "mockFile": "merchantcreate.json",
+             "forceFirstObject": false
+          } 
+        },
+          "merchant/balance": {
+          "latency": 20,
+          "verbs": ["get"],
+          "mockFile": "merchantbalance.json",
+          "switch":"x-api-correlation-id",
+         "jsonPathSwitchResponse": { 
+             "jsonpath":"$[?(@['x-api-correlation-id']",
+             "mockFile":"merchantbalance.json",
+             "forceFirstObject":false
+          }  
+        },
+          "merchant/transactions": {
+          "latency": 20,
+          "verbs": ["get"],
+          "mockFile":"merchanttransactions.json",
+          "switch":"x-api-correlation-id",
+         "jsonPathSwitchResponse": { 
+             "jsonpath":"$[?(@['x-api-correlation-id']",
+             "mockFile":"merchanttransactions.json",
+             "forceFirstObject":false
+          }  
+        },
+            "payment/code": {
+            "latency": 20,
+            "verbs": ["post"],
+            "mockFile":"paymentcodecreate.json",
+            "switch": "x-api-correlation-id",
+            "jsonPathSwitchResponse": { 
+             "jsonpath":"$[?(@['x-api-correlation-id']",
+             "mockFile":"paymentcodecreate.json",
+             "forceFirstObject":false
+          } 
+        },
+            "payment/code/:paymentCode": {
+            "latency": 20,
+            "verbs": ["get","delete"],
+      
+            "responses": {
+                "delete": {
+                    "mockFile":"paymentcodedelete.json",
+                    "switch": "paymentCode",
+                    "jsonPathSwitchResponse": { 
+                    "jsonpath":"$[?(@.paymentCode==#paymentCode#)]",
+                    "mockFile":"paymentcodedelete.json",
+                    "forceFirstObject":false
+                    }
+                },
+                "get": {
+                    "mockFile":"paymentcoderequest.json",
+                    "switch": "paymentCode",
+                    "jsonPathSwitchResponse": { 
+                        "jsonpath":"$[?(@.paymentCode==#paymentCode#)]",
+                        "mockFile":"paymentcoderequest.json",
+                        "forceFirstObject":false
+                    }
+                }            
+            }
+       },
+       "payment/code/cancel/:paymentCode": {
+            "latency": 20,
+            "verbs": ["delete"],
+            "mockFile":"paymentcodedelete.json",
+            "switch": "paymentCode",
+         "jsonPathSwitchResponse": { 
+             "jsonpath":"$[?(@.paymentCode==#paymentCode#)]",
+             "mockFile":"paymentcodedelete.json",
+             "forceFirstObject":false
+          } 
+     },
+        "merchant/notification": {
+            "latency": 20,
+            "verbs": ["post"],
+            "mockFile":"webhooknotification.json",
+            "switch": "x-api-correlation-id",
+          "jsonPathSwitchResponse": { 
+             "jsonpath":"$[?(@['x-api-correlation-id']",
+             "mockFile":"webhooknotification.json",
+             "forceFirstObject":false
+          } 
+        },
+        "merchant/notifications/:uuid": {
+          "latency": 20,
+          "verbs": ["get"],
+          "mockFile": "webhooklist.json",
+          "switch":"uuid",
+         "jsonPathSwitchResponse": { 
+             "jsonpath":"$[?(@.uuid==\"#uuid#\")]",
+             "mockFile":"webhooklist.json",
+             "forceFirstObject":false
+          }  
+        },
+        "merchant/notifications/cancel/:uuid": {
+          "latency": 20,
+          "verbs": ["delete"],
+          "mockFile":"webhookdelete.json",
+          "switch":"uuid",
+         "jsonPathSwitchResponse": { 
+             "jsonpath":"$[?(@.uuid==\"#uuid#\")]",
+             "mockFile":"webhookdelete.json",
+             "forceFirstObject":false
+          } 
+        }
+  }
+}
